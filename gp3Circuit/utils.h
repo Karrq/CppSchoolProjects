@@ -19,10 +19,10 @@ struct coordinate{
 };
 typedef struct coordinate coords;
 
-coords moveto(coords);
-coords lineto(coords);
-coords circle(coords, int);
-coords drawMove(coords);
-coords drawMove(int, int);
+coords moveto(coords C);
+coords lineto(coords C);
+coords circle(coords C, int radius);
+coords drawMove(coords C);
+coords drawMove(int x, int y);
 
 #endif
