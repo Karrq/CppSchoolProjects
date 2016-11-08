@@ -1,0 +1,37 @@
+# Project: gp3Circuit
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = credits.o components.o gp3Circuit.o utils.o
+LINKOBJ  = credits.o components.o gp3Circuit.o utils.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -L"H:/2016-17/cpp/libs" -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = gp3Circuit.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+credits.o: credits.cpp
+	$(CPP) -c credits.cpp -o credits.o $(CXXFLAGS)
+
+components.o: components.cpp
+	$(CPP) -c components.cpp -o components.o $(CXXFLAGS)
+
+gp3Circuit.o: gp3Circuit.cpp
+	$(CPP) -c gp3Circuit.cpp -o gp3Circuit.o $(CXXFLAGS)
+
+utils.o: utils.cpp
+	$(CPP) -c utils.cpp -o utils.o $(CXXFLAGS)
