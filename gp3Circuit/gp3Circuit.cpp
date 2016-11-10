@@ -21,7 +21,10 @@ int main(void){
     int w=800;
     int h=400;
     
-    coords cM={x,y};
+    coords cM;
+    
+    cM.x=x;
+    cM.y=y;
     coords cMQ=cM;
     coords cMC, Cr2, Cr3, Cr4, Cc2, CA, CB;
     
@@ -46,7 +49,8 @@ int main(void){
 	drawResistor(cMC,true);
 	
 	// R2
-	cM={cMC.x,cMC.y+57};
+	cM.x=cMC.x;
+	cM.y=cMC.y+57;
 	Cr2=drawResistor(cM,true);		
 	
 	// Q1

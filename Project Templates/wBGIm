@@ -1,12 +1,12 @@
 [Project]
-FileName=gp3Circuit.dev
-Name=gp3Circuit
-UnitCount=6
+FileName=wBGIm
+Name=TemplateWBGIM
+UnitCount=0
 Type=1
 Ver=2
 ObjFiles=
-Includes=G:\2016-17\CppSchoolProjects\libs
-Libs=G:\2016-17\CppSchoolProjects\libs
+Includes=H:\2016-17\CppSchoolProjects\libs\wBGIm;G:\2016-17\CppSchoolProjects\libs\wBGIm
+Libs=G:\2016-17\CppSchoolProjects\libs\wBGIm;H:\2016-17\CppSchoolProjects\libs\wBGIm
 PrivateResource=
 ResourceIncludes=
 MakeIncludes=
@@ -18,9 +18,9 @@ Icon=
 ExeOutput=
 ObjectOutput=
 OverrideOutput=0
-OverrideOutputName=gp3Circuit.exe
+OverrideOutputName=wBGIm.exe
 HostApplication=
-Folders=Headers,"Source Files"
+Folders=
 CommandLine=
 UseCustomMakefile=0
 CustomMakefile=Makefile.win
@@ -50,40 +50,10 @@ ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=0
 
-[Unit1]
-FileName=credits.cpp
-CompileCpp=1
-Folder=Source Files
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit3]
 FileName=components.cpp
 CompileCpp=1
 Folder=Source Files
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit2]
-FileName=utils.h
-CompileCpp=1
-Folder=Headers
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit4]
-FileName=gp3Circuit.cpp
-CompileCpp=1
-Folder=
 Compile=1
 Link=1
 Priority=1000

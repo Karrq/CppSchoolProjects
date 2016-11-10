@@ -1,0 +1,4 @@
+http://devpaks.org/details.php?devpak=38 ATK
+http://devpaks.org/details.php?devpak=39 GLIB
+http://devpaks.org/details.php?devpak=40 PANGO
+http://devpaks.org/details.php?devpak=41 GTK+
