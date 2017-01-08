@@ -1,0 +1,42 @@
+#Define user includes 
+USRINCS = -I"H:/2016-17/CppSchoolProjects/libs/wBGIm"
+
+#Define user libraries
+USRLIBS = -L"H:\2016-17\CppSchoolProjects\libs\wBGIm\libbgi.a" -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -lbgi
+
+#Define Objects
+OBJ = credits.o components.o gp3Circuit.o utils.o
+
+ 
+clean: 
+	rm.exe -f $(OBJ) gp3Circuit.exe
+ 
+all: $(OBJ)
+	$(COMPILER) credits.o components.o gp3Circuit.o utils.o -o gp3Circuit.exe $(LIBS)
+ 
+credits.o: 
+	$(COMPILER) $(INCS) -c credits.cpp -o credits.o 
+ 
+components.o: 
+	$(COMPILER) $(INCS) -c components.cpp -o components.o 
+ 
+gp3Circuit.o: 
+	$(COMPILER) $(INCS) -c gp3Circuit.cpp -o gp3Circuit.o 
+ 
+utils.o: 
+	$(COMPILER) $(INCS) -c utils.cpp -o utils.o 
+	
+	
+	
+#Define default includes
+DEFINCS = -I"C:/MinGW64/include" -I"C:/MinGW64/x86_64-w64-mingw32/include" -I"C:/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+#Define includes
+INCS = $(DEFINCS) $(USRINCS) -m32
+
+#Define default libs 
+DEFLIBS = -L"C:/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc 
+#Define libs
+LIBS = $(DEFLIBS) $(USRLIBS)
+
+#Define Compiler
+COMPILER = gcc.exe

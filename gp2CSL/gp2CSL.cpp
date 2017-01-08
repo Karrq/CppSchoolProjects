@@ -3,10 +3,7 @@
    31/10/2016
    
    Consegna:
-            Disegna carta logaritmica 
-            
-   TODO:
-        Input n decadi e v div verticali
+            Disegna carta semi-logaritmica 
 **/
 
 #include<graphics.h>

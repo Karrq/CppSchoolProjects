@@ -1,12 +1,12 @@
 [Project]
 FileName=gp3Circuit.dev
 Name=gp3Circuit
-UnitCount=6
+UnitCount=7
 Type=1
 Ver=2
 ObjFiles=
-Includes=G:\2016-17\CppSchoolProjects\libs
-Libs=G:\2016-17\CppSchoolProjects\libs
+Includes=H:\2016-17\CppSchoolProjects\libs\wBGIm
+Libs=H:\2016-17\CppSchoolProjects\libs\wBGIm
 PrivateResource=
 ResourceIncludes=
 MakeIncludes=
@@ -26,8 +26,8 @@ UseCustomMakefile=0
 CustomMakefile=Makefile.win
 IncludeVersionInfo=0
 SupportXPThemes=0
-CompilerSet=3
-CompilerSettings=0000000100000000000000000
+CompilerSet=4
+CompilerSettings=0000000100000000001000000
 LogOutput=
 LogOutputEnabled=0
 
@@ -106,6 +106,15 @@ CompileCpp=1
 Folder=Source Files
 Compile=1
 Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
+FileName=Makefile.win
+Folder=
+Compile=0
+Link=0
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=

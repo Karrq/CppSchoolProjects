@@ -1,4 +1,5 @@
 #include <graphics.h>
+#include <iostream.h>
 #include "utils.h"
 
 coords moveto(coords C){
@@ -44,5 +45,9 @@ coords drawMove(coords C){
 	C=moveto(C);
 	
 	return C;
+}
+
+void getVars(void){
+          
 }
 

@@ -20,11 +20,14 @@ coords drawCapacitor(coords cC, bool r){
 		Occupa 30x20px	
 	**/
 	
-		int a=10;
+		int a=15;
+		
+		circle(cC, 3);
 		
 		if(!r){
 		
 			// sbarretta iniziale
+			
 			cC.x+=a;		
 			drawMove(cC.x,cC.y);
 		
@@ -79,6 +82,8 @@ coords drawCapacitor(coords cC, bool r){
 			
 		}
 		
+		circle(cC, 3);
+		
 	return cC;	
 
 }
@@ -96,7 +101,7 @@ coords drawResistor(coords cR, bool r){
         Occupa 60x30px
     **/
      
-    int a=5;
+    int a=15;
     int b=15;
     int c=int((cos(45)*b)+0.5);
      
@@ -104,6 +109,7 @@ coords drawResistor(coords cR, bool r){
     int x1=0;
     
     moveto(cR);
+    circle(cR,3);
      
     if(r){
     	
@@ -112,7 +118,7 @@ coords drawResistor(coords cR, bool r){
         
         //mezzo-segmento iniziale 
 
-        drawMove(cR.x,cR.y+a);
+        cR=drawMove(cR.x,cR.y+a);
         
         for(int i=0; i<=5; i++){
         	//resistenza stessa
@@ -165,6 +171,8 @@ coords drawResistor(coords cR, bool r){
         cR.x+=a;
         drawMove(cR);
     }
+    
+    circle(cR, 3);
           
      return cR;     
      
@@ -206,6 +214,10 @@ coords drawTransistor(coords cQ, bool r, int terminal){
 		lineto(cQB.x+15,cQB.y+15);
 		lineto(cQB.x+15,cQB.y-15);
 		
+		//Cerchio transistor
+		int r=30;
+        circle(cQE.x,cQB.y,r);
+		
 		//mod freccia bassa
 		moveto(cQB.x+15,cQB.y);
 		lineto(cQE.x,cQE.y-15);
@@ -225,7 +237,7 @@ coords drawTransistor(coords cQ, bool r, int terminal){
 		lineto(cQC.x,cQC.y+15);
 		
 		//terminale collettore
-		lineto(cQC.x,cQC.y);
+		lineto(cQC.x,cQC.y-3);
 				
 		
 	}
@@ -272,4 +284,37 @@ coords drawGround(coords cG){
 	
 	return cG;
 	
+}
+
+coords drawResistor(int x, int y, bool r){
+       coords Cr;
+       Cr.x=x;
+       Cr.y=y;
+       Cr=drawResistor(Cr, r);
+       return Cr;
+}
+
+coords protoResistor(coords Cr, bool r){
+       
+       if(r){
+             
+             
+       }else{
+             
+             
+       }
+       
+       
+       
+       return Cr;       
+}
+
+coords protoResistor(int x, int y, bool r){
+       coords Cr;
+       
+       Cr.x = x;
+       Cr.y = y;
+       
+       Cr=protoResistor(Cr, r);
+       return Cr;       
 }

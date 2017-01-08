@@ -25,4 +25,6 @@ coords circle(coords C, int radius);
 coords drawMove(coords C);
 coords drawMove(int x, int y);
 
+void getVars(void);
+
 #endif

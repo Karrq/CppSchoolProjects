@@ -8,15 +8,15 @@
 #include<iostream.h>
 
 void credits(){
+     
+    std::cout << "Creato da Francesco Dainese\n";
+    std::cout << "In data: 7/11/2016\n";
+    std::cout << "Terminato il: 7/11/2016\n";
+    std::cout << "Descrizione del programma:\n";
+    std::cout << "Disegna il circuito dato\n";   
+    std::cout << "Premere un tasto per continuare\n";
     
-    printf("Creato da Francesco Dainese\n");
-    printf("In data: 7/11/2016\n");
-    printf("Terminato il: 7/11/2016\n");
-    printf("Descrizione del programma:\n");
-    printf("Disegna il circuito dato\n");    
-    printf("Premere un tasto per continuare\n");
-    
-    std::cin.get();  //getch
+    std::cin.get();
     
     
 }
